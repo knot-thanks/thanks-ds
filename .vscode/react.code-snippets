@@ -1,0 +1,46 @@
+{
+  "Create New Empty React Storybook Component": {
+    "prefix": ["story", "storybook"],
+    "body": [
+      "import React from 'react';",
+      "import { Story, Meta } from '@storybook/react/types-6-0';",
+      "",
+      "import $1, { Props } from './';",
+      "",
+      "export default {",
+      "  title: '$2 / $1',",
+      "  component: $1,",
+      "  argTypes: {},",
+      "} as Meta;",
+      "",
+      "const Template: Story<Props> = (args) => (",
+      "  <$1 {...args} />",
+      ");",
+      "",
+      "export const Base = Template.bind({});",
+      "Base.args = {};",
+      ""
+    ],
+    "description": "빈 스토리북 컴포넌트 생성"
+  },
+  "Create New Empty React Component": {
+    "prefix": ["react", "rc"],
+    "body": [
+      "import styled from \"styled-components\"",
+      "",
+      "export interface Props {}",
+      "",
+      "const $1: React.FC<Props> = () => {",
+      "  return (",
+      "    <Wrapper>$1</Wrapper>",
+      "  )",
+      "}",
+      "",
+      "const Wrapper = styled.div``;",
+      "",
+      "export default $1",
+      ""
+    ],
+    "description": "빈 리액트 컴포넌트 생성"
+  }
+}
